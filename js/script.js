@@ -1,23 +1,33 @@
 var dashify = function(sentence){
-  console.log(sentence)
- return;
+  var newsentence = sentence.split('')
+  var vowels = ["a","e","i","o","u"]
+  console.log(newsentence.length)
+  for(x=0; x <= newsentence.length; x++){
+    vowels.forEach(function(letter){
+      console.log(letter + " " + newsentence[x])
+      if(newsentence[x] === letter){
+        newsentence[x]= "-";
+      };
+    });
+    console.log(newsentence)
+    return;
+  }
 }
 
 $(document).ready(function() {
   $('form#list').submit(function(event){
      event.preventDefault()
 
+
+
   var words = $('#words').val()
 
-  var newsentence = dashify(words);
+  var newsentence = dashify(words)
 
   $('output').append(newsentence)
 
-  var dashify = ['A', 'E', 'I', 'O', 'U'];
-  for (var index = 0; index < languages.length; index += 1) {
-    alert('I love ' + dashify[index] + '!');
-  }
+  $("#display").append(x);
+})
 
 
   });
-});
