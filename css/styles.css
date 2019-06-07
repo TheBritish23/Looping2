@@ -9,6 +9,8 @@
 h1 {
   font-style: italic;
   color: red;
+  background: black;
+  font-size: 50px
 }
 
 .button {
